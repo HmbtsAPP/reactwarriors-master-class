@@ -29,6 +29,7 @@ class App extends React.Component {
 
   addMovieToWillWatch = (movie) => {
     console.log(movie);
+    this.state.movieWillWatch.push(movie);
   };
 
   render() {

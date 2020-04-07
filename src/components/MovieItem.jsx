@@ -1,7 +1,7 @@
 import React from "react";
 
 const MovieItem = (props) => {
-  console.log(props);
+  // console.log(props);
   const { movie, removeMovie, addMovieToWillWatch } = props;
   return (
     <div className="card">
