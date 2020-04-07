@@ -1,7 +1,7 @@
 import React from "react";
 import { moviesData } from "../moviesData";
 import MovieItem from "./MovieItem";
-//UI = fn(state)
+//UI = fn(state, props)
 
 class App extends React.Component {
   constructor() {
@@ -9,6 +9,7 @@ class App extends React.Component {
 
     this.state = {
       movies: moviesData,
+      movieWillWatch: [],
     };
 
     //this.removeMovie = this.removeMovie.bind(this);
