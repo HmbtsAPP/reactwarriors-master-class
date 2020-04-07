@@ -27,6 +27,10 @@ class App extends React.Component {
     });
   };
 
+  addMovieToWillWatch = (movie) => {
+    console.log(movie);
+  };
+
   render() {
     console.log("render", this.state, this.temp);
     return (
@@ -37,7 +41,11 @@ class App extends React.Component {
               {this.state.movies.map((movie) => {
                 return (
                   <div className="col-6 mb-4" key={movie.id}>
-                    <MovieItem movie={movie} removeMovie={this.removeMovie} />
+                    <MovieItem
+                      movie={movie}
+                      removeMovie={this.removeMovie}
+                      addMovieToWillWatch={this.movieWillWatch}
+                    />
                   </div>
                 );
               })}
