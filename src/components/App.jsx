@@ -30,8 +30,9 @@ class App extends React.Component {
   addMovieToWillWatch = (movie) => {
     console.log(movie);
     // this.state.movieWillWatch.push(movie);
-    const updateMoviesToWillWatch = [...this.state.movieWillWatch];
-    updateMoviesToWillWatch.push(movie);
+    // const updateMoviesToWillWatch = [...this.state.movieWillWatch];
+    // updateMoviesToWillWatch.push(movie);
+    const updateMoviesToWillWatch = [...this.state.movieWillWatch, movie];
 
     this.setState({
       movieWillWatch: updateMoviesToWillWatch,
