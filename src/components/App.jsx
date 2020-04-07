@@ -9,7 +9,7 @@ class App extends React.Component {
 
     this.state = {
       movies: moviesData,
-      movieWillWatch: [],
+      movieWillWatch: [1],
     };
 
     //this.removeMovie = this.removeMovie.bind(this);
@@ -44,7 +44,7 @@ class App extends React.Component {
             </div>
           </div>
           <div className="col-3">
-            <p>Will Watch: 0</p>
+            <p>Will Watch: {this.state.movieWillWatch.length}</p>
           </div>
         </div>
       </div>
