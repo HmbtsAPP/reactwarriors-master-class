@@ -44,7 +44,7 @@ class App extends React.Component {
                     <MovieItem
                       movie={movie}
                       removeMovie={this.removeMovie}
-                      addMovieToWillWatch={this.movieWillWatch}
+                      addMovieToWillWatch={this.addMovieToWillWatch}
                     />
                   </div>
                 );
