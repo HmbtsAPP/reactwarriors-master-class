@@ -8,7 +8,7 @@ const MovieItem = (props) => {
       <img
         className="card-img-top"
         src={`https://image.tmdb.org/t/p/w500${
-          movie.item.backdrop_path || movie.poster_path
+          movie.backdrop_path || movie.poster_path
         }`}
         alt=""
       />
