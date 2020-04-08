@@ -5,7 +5,7 @@ class MovieItem extends React.Component {
     super();
 
     this.state = {
-      willWatch: false
+      willWatch: false,
     };
 
     //this.removeMovie = this.removeMovie.bind(this);
