@@ -7,8 +7,6 @@ class MovieItem extends React.Component {
     this.state = {
       willWatch: false,
     };
-
-    //this.removeMovie = this.removeMovie.bind(this);
   }
 
   render() {
@@ -26,13 +24,19 @@ class MovieItem extends React.Component {
           <h6 className="card-title">{movie.title}</h6>
           <div className="d-flex justify-content-between align-items-center">
             <p className="mb-0">Rating: {movie.vote_average}</p>
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={addMovieToWillWatch.bind(null, movie)}
-            >
-              Will Watch
-            </button>
+            {this.state.willWatch === true ? (
+              <button type="button" className="btn btn-success">
+                Remove Will Watch
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="btn btn-secondary"
+                onClick={addMovieToWillWatch.bind(null, movie)}
+              >
+                Add Will Watch
+              </button>
+            )}
           </div>
           <button onClick={removeMovie.bind(null, movie)}>Delete movie</button>
         </div>
