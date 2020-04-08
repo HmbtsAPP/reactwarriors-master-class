@@ -1,6 +1,16 @@
 import React from "react";
 
 class MovieItem extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      willWatch: false
+    };
+
+    //this.removeMovie = this.removeMovie.bind(this);
+  }
+
   render() {
     const { movie, removeMovie, addMovieToWillWatch } = this.props;
     return (
