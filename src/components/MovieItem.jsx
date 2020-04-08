@@ -25,7 +25,15 @@ class MovieItem extends React.Component {
           <div className="d-flex justify-content-between align-items-center">
             <p className="mb-0">Rating: {movie.vote_average}</p>
             {this.state.willWatch ? (
-              <button type="button" className="btn btn-success">
+              <button
+                type="button"
+                className="btn btn-success"
+                onClick={() => {
+                  this.setState({
+                    willWatch: false,
+                  });
+                }}
+              >
                 Remove Will Watch
               </button>
             ) : (
