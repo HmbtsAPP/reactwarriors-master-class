@@ -32,7 +32,12 @@ class MovieItem extends React.Component {
               <button
                 type="button"
                 className="btn btn-secondary"
-                onClick={addMovieToWillWatch.bind(null, movie)}
+                onClick={() => {
+                  this.setState({
+                    willWatch: true,
+                  });
+                  addMovieToWillWatch.bind(null, movie);
+                }}
               >
                 Add Will Watch
               </button>
